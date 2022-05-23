@@ -8,7 +8,7 @@
 /* body style */
 
 body {
-    background-color: rgb(41, 164, 41);
+    background-color: rgb(123, 209, 123);
 }
 
 /* wrapper settings */
@@ -16,8 +16,7 @@ body {
 .wrapper {
     width: 500px;
     height: 500px;
-    margin: 0 auto;
-    border:1px solid black;
+    margin: 50px auto;
 }
 
 #start-wrapper {
@@ -36,5 +35,50 @@ body {
 header {
     margin: 0 auto;
     text-align: center;
+}
+/* start-screen */
+
+#start-screen{
+    width: 80%;
+    height: 80%;
+    border:1px solid black;
+    border-radius: 10px;
+    margin: 10px auto 0;
+    text-align: center;
+    padding: 10px 0;
+    background-color: coral;
+
+}
+
+#start-screen span{
+font-size: 1.5em;
+}
+
+#rules{
+    width: 80%;
+    height: 80%;
+    border:1px solid black;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#rules p{
+    margin: 20px 0;
+}
+#button {
+    margin: 0 auto;
+    text-align: center;
+}
+button{
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 1.5em;
+    background-color: orange;
+
 }
 
