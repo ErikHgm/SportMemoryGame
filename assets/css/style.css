@@ -1,0 +1,28 @@
+/* set to page default */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* body style */
+
+body {}
+
+/* wrapper settings */
+
+.wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#start-wrapper {
+    display: block;
+}
+
+#game-wrapper {
+    display: none;
+}
+
+#finish-wrapper {
+    display: none;
+}
