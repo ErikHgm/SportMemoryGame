@@ -1,5 +1,5 @@
 /* google fonts setup */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Russo+One&display=swap');
 
 /* set to page default */
 * {
@@ -12,6 +12,7 @@
 
 body {
     background-color: rgb(123, 209, 123);
+    font-family: 'Russo One', sans-serif;
 }
 
 /* wrapper settings */
@@ -38,16 +39,15 @@ body {
 header {
     margin: 0 auto;
     text-align: center;
-    font-family: 'Luckiest Guy', cursive;
-    color:blueviolet
+    color: blueviolet
 }
 
 /* start-screen */
 
-#start-screen{
+#start-screen {
     width: 80%;
     height: 80%;
-    border:1px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     margin: 10px auto 0;
     text-align: center;
@@ -56,14 +56,15 @@ header {
 
 }
 
-#start-screen span{
-font-size: 1.5em;
+#start-screen span {
+    font-size: 1.3em;
+    color: rgb(17, 2, 31)
 }
 
-#rules{
+#rules {
     width: 80%;
     height: 80%;
-    border:1px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
@@ -72,19 +73,21 @@ font-size: 1.5em;
     box-sizing: border-box;
 }
 
-#rules p{
+#rules p {
     margin: 20px 0;
 }
+
 #button {
     margin: 0 auto;
     text-align: center;
 }
-button{
+
+button {
     padding: 10px 30px;
     border-radius: 10px;
     margin: 20px;
     font-size: 1.5em;
     background-color: orange;
+    font-family: 'Russo One', sans-serif;
 
 }
-
