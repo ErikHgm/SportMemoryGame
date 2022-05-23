@@ -14,9 +14,9 @@
         <header>
             <h1>Welcome to SportsMemory!</h1>
         </header>
-        <section id="start-screen">
+        <section id="start-screen" class="screens">
             <span>The Game Rules:</span>
-            <section id="rules">
+            <div id="rules" class="inside-screen">
                 <p>Click on the cards to turn them around and try to remember each card you flip. </p>
 
                 <p> When you find two cards of the same kind click on them both and they will stay open. </p>
@@ -25,7 +25,7 @@
 
                 <p> Your goal is to finish the game as fast as possible! </p>
 
-            </section>
+            </div>
             <div>
                 <span>Enter your name:</span>
                 <input type="text" id="name">
@@ -40,8 +40,10 @@
         <header>
             <h1>Good Luck!</h1>
         </header>
-        <section id="game-screen">
-            <section id="game"></section>
+        <section id="game-screen" class="screens">
+            <div id="game" class="inside-screen">
+
+            </div>
 
         </section>
     </div>
@@ -49,18 +51,19 @@
         <header>
             <h1>FINISHED!</h1>
         </header>
-        <section id="finish-screen">
+        <section id="finish-screen" class="screens">
             <span>You finished in (time)!</span>
-            <section id="highscore"></section>
-            <div id="highscore-table">
-                <span>HIGHSCORE</span>
-                <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
+            <div id="highscore" class="inside-screen">
+                <div id="highscore-table">
+                    <span>HIGHSCORE</span>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
             </div>
         </section>
         <button type="submit">Start New Game!</button>

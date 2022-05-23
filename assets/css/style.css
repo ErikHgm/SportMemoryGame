@@ -18,7 +18,7 @@ body {
 /* wrapper settings */
 
 .wrapper {
-    width: 500px;
+    width: 700px;
     height: 500px;
     margin: 50px auto;
 }
@@ -28,11 +28,11 @@ body {
 }
 
 #game-wrapper {
-    display: none;
+    display: block;
 }
 
 #finish-wrapper {
-    display: none;
+    display: block;
 }
 
 /* header & headings */
@@ -44,7 +44,7 @@ header {
 
 /* start-screen */
 
-#start-screen {
+.screens {
     width: 80%;
     height: 80%;
     border: 1px solid black;
@@ -56,12 +56,12 @@ header {
 
 }
 
-#start-screen span {
+span {
     font-size: 1.3em;
     color: rgb(17, 2, 31)
 }
 
-#rules {
+.inside-screen {
     width: 80%;
     height: 80%;
     border: 1px solid black;
