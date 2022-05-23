@@ -4,15 +4,20 @@
     padding: 0;
     border: none;
 }
+
 /* body style */
 
-body {}
+body {
+    background-color: rgb(41, 164, 41);
+}
 
 /* wrapper settings */
 
 .wrapper {
     width: 500px;
+    height: 500px;
     margin: 0 auto;
+    border:1px solid black;
 }
 
 #start-wrapper {
@@ -26,3 +31,10 @@ body {}
 #finish-wrapper {
     display: none;
 }
+
+/* header & headings */
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
