@@ -10,11 +10,11 @@
 <!-- body -->
 <body>
     <!-- this screen is the default screen when visiting the website -->
-    <div id="start-wrapper" class="wrapper">
+    <div id="start-screen" class="wrapper">
         <header>
             <h1>Welcome to SportsMemory!</h1>
         </header>
-        <section id="start-screen" class="screens">
+        <section id="start-screen-info" class="screens">
             <span>The Game Rules:</span>
             <div id="rules" class="inside-screen">
                 <p>Click on the cards to turn them around and try to remember each card you flip. </p>
@@ -32,16 +32,16 @@
             </div>
         </section>
         <div id="button">
-            <button type="submit">Start Game!</button>
+            <button id="start-button" type="submit">Start Game!</button>
         </div>
 
     </div>
     <!-- the game screen shows when clicking the submit button - Start game! It is controlled by Javascript. -->
-    <div id="game-wrapper" class="wrapper">
+    <div id="game-screen" class="wrapper">
         <header>
             <h1>Good Luck!</h1>
         </header>
-        <section id="game-screen" class="screens">
+        <section id="game-screen-info" class="screens">
             <div id="game" class="inside-screen">
 
             </div>
@@ -49,11 +49,11 @@
         </section>
     </div>
     <!-- the finish wrapper is displayed after the game is completed by the user. It is controlled by Javascript. -->
-    <div id="finish-wrapper" class="wrapper">
+    <div id="finish-screen" class="wrapper">
         <header>
             <h1>FINISHED!</h1>
         </header>
-        <section id="finish-screen" class="screens">
+        <section id="finish-screen-info" class="screens">
             <span>You finished in (time)!</span>
             <div id="highscore" class="inside-screen">
                 <div id="highscore-table">

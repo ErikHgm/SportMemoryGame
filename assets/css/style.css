@@ -11,8 +11,9 @@
 /* body style */
 
 body {
-    background-color: rgb(123, 209, 123);
     font-family: 'Russo One', sans-serif;
+    background: linear-gradient(#d764e6, #9198e5);
+    min-height: 100vh;
 }
 
 /* wrapper settings */
@@ -20,19 +21,24 @@ body {
 .wrapper {
     width: 700px;
     height: 500px;
-    margin: 50px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
 }
 
-#start-wrapper {
+#start-screen {
     display: block;
 }
 
-#game-wrapper {
-    display: block;
+#game-screen {
+    display: none;
 }
 
-#finish-wrapper {
-    display: block;
+#finish-screen {
+    display: none;
 }
 
 /* header & headings */
