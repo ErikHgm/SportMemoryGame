@@ -42,7 +42,7 @@ header {
     color: blueviolet
 }
 
-/* start-screen */
+/* screens styling */
 
 .screens {
     width: 80%;
@@ -73,10 +73,12 @@ span {
     box-sizing: border-box;
 }
 
+/* start-screen infotext styling */
 #rules p {
     margin: 20px 0;
 }
 
+/* start game and quit game buttons styling */
 #button {
     margin: 0 auto;
     text-align: center;

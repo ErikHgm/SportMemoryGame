@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +7,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>SportsMemory!</title>
 </head>
-
+<!-- body -->
 <body>
+    <!-- this screen is the default screen when visiting the website -->
     <div id="start-wrapper" class="wrapper">
         <header>
             <h1>Welcome to SportsMemory!</h1>
@@ -36,6 +36,7 @@
         </div>
 
     </div>
+    <!-- the game screen shows when clicking the submit button - Start game! It is controlled by Javascript. -->
     <div id="game-wrapper" class="wrapper">
         <header>
             <h1>Good Luck!</h1>
@@ -47,6 +48,7 @@
 
         </section>
     </div>
+    <!-- the finish wrapper is displayed after the game is completed by the user. It is controlled by Javascript. -->
     <div id="finish-wrapper" class="wrapper">
         <header>
             <h1>FINISHED!</h1>
@@ -66,9 +68,10 @@
                 </div>
             </div>
         </section>
-        <button type="submit">Start New Game!</button>
-        <button type="submit">Quit Game!</button>
-
+        <div id="button">
+            <button type="submit">Start New Game!</button>
+            <button type="submit">Quit Game!</button>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>
