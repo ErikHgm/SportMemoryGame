@@ -12,8 +12,16 @@
 
 body {
     font-family: 'Russo One', sans-serif;
-    background: linear-gradient(#d764e6, #9198e5);
+    background: linear-gradient(#120d13, #4452e6);
     min-height: 100vh;
+    
+}
+
+/* header & headings */
+header {
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(174, 34, 226)
 }
 
 /* wrapper settings */
@@ -30,7 +38,7 @@ body {
 }
 
 #start-screen {
-    display: block;
+    display: none;
 }
 
 #game-screen {
@@ -41,36 +49,29 @@ body {
     display: none;
 }
 
-/* header & headings */
-header {
-    margin: 0 auto;
-    text-align: center;
-    color: blueviolet
-}
+
 
 /* screens styling */
 
 .screens {
     width: 80%;
     height: 80%;
-    border: 1px solid black;
     border-radius: 10px;
     margin: 10px auto 0;
     text-align: center;
     padding: 10px 0;
-    background-color: coral;
+    background: linear-gradient(rgb(255, 100, 44), rgb(241, 152, 119));
 
 }
 
 span {
     font-size: 1.3em;
-    color: rgb(17, 2, 31)
+    color: black;
 }
 
 .inside-screen {
     width: 80%;
     height: 80%;
-    border: 1px solid black;
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
@@ -95,7 +96,8 @@ button {
     border-radius: 10px;
     margin: 20px;
     font-size: 1.5em;
-    background-color: orange;
+    background: linear-gradient(yellow, rgb(255, 196, 0));
     font-family: 'Russo One', sans-serif;
+    color: rgb(18, 18, 18);
 
 }
