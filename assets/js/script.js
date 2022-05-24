@@ -9,7 +9,7 @@
     1. Hide the start screen and finish screen
     2. Display the game screen.
     3. Create and array of 4x4 cards
-        1. The array needs to be random evertime it executes.
+        1. The array needs to be random everytime it executes.
     4. Start the timer that count the time it takes.
 
 5. When user clicks on a card:
@@ -37,11 +37,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-    showStartscreen();
+    showStartScreen();
 })
 let name = document.getElementById('name').innerText;
 
-function showStartscreen() {
+function showStartScreen() {
     document.getElementById('start-screen').style.display = "block";
     let startbutton = document.getElementById('start-button');
     startbutton.addEventListener('click', showGameScreen);
@@ -51,4 +51,27 @@ function showStartscreen() {
 function showGameScreen() {
     document.getElementById('start-screen').style.display = "none";
     document.getElementById('game-screen').style.display = "block";
+    cardsArray();
+}
+//Array with 16 items inside, 8 pairs of two cards of the same kind
+function cardsArray() {
+    let cardDeck = [
+        '<i class="fa-solid fa-table-tennis-paddle-ball"></i>',
+        '<i class="fa-solid fa-basketball"></i>',
+        '<i class="fa-solid fa-hockey-puck"></i>',
+        '<i class="fa-solid fa-futbol"></i>',
+        '<i class="fa-solid fa-dumbbell"></i>',
+        '<i class="fa-solid fa-baseball-bat-ball"></i>',
+        '<i class="fa-solid fa-person-swimming"></i>',
+        '<i class="fa-solid fa-person-skiing"></i>',
+        '<i class="fa-solid fa-table-tennis-paddle-ball"></i>',
+        '<i class="fa-solid fa-basketball"></i>',
+        '<i class="fa-solid fa-hockey-puck"></i>',
+        '<i class="fa-solid fa-futbol"></i>',
+        '<i class="fa-solid fa-dumbbell"></i>',
+        '<i class="fa-solid fa-baseball-bat-ball"></i>',
+        '<i class="fa-solid fa-person-swimming"></i>',
+        '<i class="fa-solid fa-person-skiing"></i>',
+    ];
+
 }
