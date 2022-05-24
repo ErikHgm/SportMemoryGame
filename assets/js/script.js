@@ -36,10 +36,19 @@
     1. Show the start screen and hide the game and finish screen.
  */
 
-    document.addEventListener('DOMContentLoaded', function() {
-        showStartscreen();
-    })
-    
-    function showStartscreen() {
-        document.getElementById('start-screen').style.display = "block";
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    showStartscreen();
+})
+let name = document.getElementById('name').innerText;
+
+function showStartscreen() {
+    document.getElementById('start-screen').style.display = "block";
+    let startbutton = document.getElementById('start-button');
+    startbutton.addEventListener('click', showGameScreen);
+
+}
+
+function showGameScreen() {
+    document.getElementById('start-screen').style.display = "none";
+    document.getElementById('game-screen').style.display = "block";
+}
