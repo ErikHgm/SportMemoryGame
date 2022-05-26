@@ -35,26 +35,38 @@
 9. If user clicks "quit game":
     1. Show the start screen and hide the game and finish screen.
  */
-
+// runs the eventlister thas is starting the showStartScreen once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     showStartScreen();
 })
-let name = document.getElementById('name').innerText;
-
+// shows the startscreen upon entering the game and runs the startbutton eventlistener
 function showStartScreen() {
     document.getElementById('start-screen').style.display = "block";
     let startbutton = document.getElementById('start-button');
     startbutton.addEventListener('click', showGameScreen);
 
 }
+// collets the name from the player
+let name = document.getElementById('name').innerText;
 
+// switches to the game screen and runs the cardsContainer function
 function showGameScreen() {
     document.getElementById('start-screen').style.display = "none";
     document.getElementById('game-screen').style.display = "block";
-    cardsArray();
+    cardsContainers();
+}
+
+//Creates the HTML structure for the cardsArray in the gamescreen
+function cardsContainers() {
+    let cardHolder = document.createElement('div')
+    cardHolder.className = 'cardHolder';
+    document.getElementById('game').appendChild(cardHolder);
+    
+
 }
 //Array with 16 items inside, 8 pairs of two cards of the same kind
 function cardsArray() {
+
     let cardDeck = [
         '<i class="fa-solid fa-table-tennis-paddle-ball"></i>',
         '<i class="fa-solid fa-basketball"></i>',
@@ -73,5 +85,6 @@ function cardsArray() {
         '<i class="fa-solid fa-person-swimming"></i>',
         '<i class="fa-solid fa-person-skiing"></i>',
     ];
+
 
 }

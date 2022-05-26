@@ -14,7 +14,7 @@ body {
     font-family: 'Russo One', sans-serif;
     background: linear-gradient(#120d13, #4452e6);
     min-height: 100vh;
-    
+
 }
 
 /* header & headings */
@@ -30,13 +30,14 @@ header {
     width: 700px;
     height: 500px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
 }
 
+/* screens styling */
 #start-screen {
     display: none;
 }
@@ -48,10 +49,6 @@ header {
 #finish-screen {
     display: none;
 }
-
-
-
-/* screens styling */
 
 .screens {
     width: 80%;
@@ -84,7 +81,11 @@ span {
 #rules p {
     margin: 20px 0;
 }
-
+.cardHolder {
+    width: 20%;
+    height: 50px;
+    background-color: grey;
+}
 /* start game and quit game buttons styling */
 #button {
     margin: 0 auto;
