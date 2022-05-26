@@ -66,29 +66,46 @@ span {
     color: black;
 }
 
+#name {
+    width: 25%;
+    padding:5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1.5em;
+
+}
+
 .inside-screen {
     width: 80%;
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 10px auto 80px;
     text-align: center;
     background-color: whitesmoke;
     padding: 30px;
     box-sizing: border-box;
+    ß
 }
 
 /* start-screen infotext styling */
 #rules p {
     margin: 20px 0;
 }
+
+/* cards holder styling */
+
 .cardHolder {
     width: 25%;
     height: 120px;
-    background-color:blue;
+    background-color: rgb(16, 16, 73);
     display: inline-block;
     border: 1px solid white;
     border-radius: 7px;
     box-sizing: border-box;
+    line-height: 120px;
+    font-size: 2em;
+    color: white;
 }
+
 /* start game and quit game buttons styling */
 #button {
     margin: 0 auto;

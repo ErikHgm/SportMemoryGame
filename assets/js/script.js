@@ -21,11 +21,10 @@ function showGameScreen() {
 
 // creates the HTML structure for the cardsArray in the gamescreen
 function cardsContainers() {
-   
-
     for (let i = 0; i < 16; i++) {
         let cardHolder = document.createElement('div')
         cardHolder.className = 'cardHolder';
+        cardHolder.innerText ='?'
         document.getElementById('game').appendChild(cardHolder);
     }
 }
