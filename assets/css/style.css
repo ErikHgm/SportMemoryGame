@@ -28,7 +28,7 @@ header {
 
 .wrapper {
     width: 700px;
-    height: 500px;
+    height: 700px;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -68,7 +68,6 @@ span {
 
 .inside-screen {
     width: 80%;
-    height: 80%;
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
@@ -82,9 +81,13 @@ span {
     margin: 20px 0;
 }
 .cardHolder {
-    width: 20%;
-    height: 50px;
-    background-color: grey;
+    width: 25%;
+    height: 120px;
+    background-color:blue;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 7px;
+    box-sizing: border-box;
 }
 /* start game and quit game buttons styling */
 #button {
