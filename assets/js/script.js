@@ -19,19 +19,23 @@ function showGameScreen() {
     cardsContainers();
 }
 
-// creates the HTML structure for the cardsArray in the gamescreen
+// creates the HTML structure for the cardHolders in the gamescreen
 function cardsContainers() {
     for (let i = 0; i < 16; i++) {
         let cardHolder = document.createElement('div')
         cardHolder.className = 'cardHolder';
-        cardHolder.innerText ='?'
+        cardHolder.innerHTML = '?'
         document.getElementById('game').appendChild(cardHolder);
     }
+
+    insertCardContent();
+
 }
 
-// array with 16 items inside, 8 pairs of two cards of the same kind
-function cardsArray() {
 
+
+function insertCardContent() {
+    // creates array with 16 items inside, 8 pairs of two items of the same kind
     let cardDeck = [
         '<i class="fa-solid fa-table-tennis-paddle-ball"></i>',
         '<i class="fa-solid fa-basketball"></i>',
@@ -51,5 +55,26 @@ function cardsArray() {
         '<i class="fa-solid fa-person-skiing"></i>',
     ];
 
+    // creates an ordered array with numbers less than 16
+    let number = [];
+    for (let i = 0; i < 16; i++) {
+        number.push(i);
+    }
+    // Sort the above number array into a random order each time it is executed.
+    // Credit: this code snippet comes from https://www.w3schools.com/js/js_array_sort.asp.
+    for (let i = number.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i)
+        let k = number[i]
+        number[i] = number[j]
+        number[j] = k
+    }
+    // inserts an item into the game screen cardHolder
+    for (let i = 0; i < 16; i++) {
+        card = document.getElementsByClassName('i');
+        card[i].innerHTML = cardDeck[number[i]];
+    }
+
+    showCard();
 
 }
+

@@ -30,7 +30,7 @@ header {
     width: 700px;
     height: 700px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
@@ -57,18 +57,18 @@ header {
     margin: 10px auto 0;
     text-align: center;
     padding: 10px 0;
-    background: linear-gradient(rgb(255, 100, 44), rgb(241, 152, 119));
+    background: linear-gradient(rgb(255, 125, 44), rgb(255, 57, 7));
 
 }
 
 span {
     font-size: 1.3em;
-    color: black;
+    color: purple;
 }
 
 #name {
     width: 25%;
-    padding:5px;
+    padding: 5px;
     border-radius: 5px;
     margin-top: 5px;
     font-size: 1.5em;
@@ -80,10 +80,10 @@ span {
     border-radius: 10px;
     margin: 10px auto 80px;
     text-align: center;
-    background-color: whitesmoke;
+    background-color:whitesmoke;
     padding: 30px;
     box-sizing: border-box;
-    ß
+
 }
 
 /* start-screen infotext styling */
@@ -93,7 +93,7 @@ span {
 
 /* cards holder styling */
 
-.cardHolder {
+.i {
     width: 25%;
     height: 120px;
     background-color: rgb(16, 16, 73);
@@ -104,6 +104,20 @@ span {
     line-height: 120px;
     font-size: 2em;
     color: white;
+}
+
+.cardHolder {
+    width: 25%;
+    height: 120px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 7px;
+    box-sizing: border-box;
+    line-height: 120px;
+    font-size: 2em;
+    color: black;
+    background-color: #4CAF50;
+
 }
 
 /* start game and quit game buttons styling */

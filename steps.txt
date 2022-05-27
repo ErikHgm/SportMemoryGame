@@ -34,4 +34,6 @@
 
 9. If user clicks "quit game":
     1. Show the start screen and hide the game and finish screen.
+
+   
  */
