@@ -97,7 +97,7 @@ span {
     width: 25%;
     height: 120px;
     background-color: rgb(16, 16, 73);
-    display: inline-block;
+    display: none;
     border: 1px solid white;
     border-radius: 7px;
     box-sizing: border-box;

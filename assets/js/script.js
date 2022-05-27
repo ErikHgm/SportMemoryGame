@@ -24,15 +24,19 @@ function cardsContainers() {
     for (let i = 0; i < 16; i++) {
         let cardHolder = document.createElement('div')
         cardHolder.className = 'cardHolder';
-        cardHolder.innerHTML = '?'
+        cardHolder.innerText = '?'
+        cardHolder.addEventListener('click', showCard);
         document.getElementById('game').appendChild(cardHolder);
-    }
 
+    }
+    for (let i = 0; i < 16; i++) {
+        let i = document.createElement('div')
+        i.className = 'i';
+        document.getElementById('game').appendChild(i);
+    }
     insertCardContent();
 
 }
-
-
 
 function insertCardContent() {
     // creates array with 16 items inside, 8 pairs of two items of the same kind
@@ -70,11 +74,22 @@ function insertCardContent() {
     }
     // inserts an item into the game screen cardHolder
     for (let i = 0; i < 16; i++) {
-        card = document.getElementsByClassName('i');
-        card[i].innerHTML = cardDeck[number[i]];
+        let card = document.getElementsByClassName('i');
+        card[i].innerText = cardDeck[number[i]];
     }
 
     showCard();
-
 }
 
+
+function showCard() {
+    console.log('clicked')
+    console.log(this)
+    console.log(this.classList)
+    if (this.classList.contains('cardHolder')) {
+        console.log("condition met")
+        this.setAttribute('class','i');
+        this.style.display = 'inline-block';
+    }
+
+}
