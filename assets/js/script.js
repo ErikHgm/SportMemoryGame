@@ -21,22 +21,21 @@ function showGameScreen() {
 
 // creates the HTML structure for the cardHolders in the gamescreen
 function cardsContainers() {
+
     for (let i = 0; i < 16; i++) {
         let cardHolder = document.createElement('div');
         cardHolder.className = 'memory-card';
         cardHolder.innerHTML = '<i class="fa-solid fa-question"></i>';
-        cardHolder.addEventListener('click', showCard);
         document.getElementById('game').appendChild(cardHolder);
-
+        cardHolder.addEventListener('click', showCard);
     }
-   
-    insertCardContent();
+    cardDeck();
 
 }
 
-function insertCardContent() {
+function cardDeck() {
     // creates array with 16 items inside, 8 pairs of two items of the same kind
-    let cardDeck = [
+    let cardArray = [
         '<i class="fa-solid fa-table-tennis-paddle-ball"></i>',
         '<i class="fa-solid fa-basketball"></i>',
         '<i class="fa-solid fa-hockey-puck"></i>',
@@ -57,7 +56,7 @@ function insertCardContent() {
 
     // creates an ordered array with numbers less than 16
     let number = [];
-    for (let i = 0; i < cardDeck.length; i++) {
+    for (let i = 0; i < cardArray.length; i++) {
         number.push(i);
     }
     // Sort the above number array into a random order each time it is executed.
@@ -69,18 +68,14 @@ function insertCardContent() {
         number[j] = k;
     }
     // inserts an item into the game screen cardHolder
-    for (let i = 0; i < cardDeck.length; i++) {
+    for (let i = 0; i < cardArray.length; i++) {
         let card = document.getElementsByClassName('icon');
-        card[i].innerHTML = cardDeck[number[i]];
+        card[i].innerHTML = cardArray[number[i]];
     }
 
-    showCard();
 }
 
-
 function showCard() {
-    if (this.classList.contains('memory-card')) {
-        this.style.background-color; 'red;';
-    }
+    this.style.animation = 'flipEffect';
 
 }
