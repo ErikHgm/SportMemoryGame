@@ -93,7 +93,7 @@ span {
 
 /* cards holder styling */
 
-.i {
+.icon {
     width: 25%;
     height: 120px;
     background-color: rgb(16, 16, 73);
@@ -102,11 +102,11 @@ span {
     border-radius: 7px;
     box-sizing: border-box;
     line-height: 120px;
-    font-size: 2em;
     color: white;
+    font-size: 10px;
 }
 
-.cardHolder {
+.memory-card {
     width: 25%;
     height: 120px;
     display: inline-block;

@@ -1,4 +1,4 @@
-/*
+
 1. First load all the eventlistener on document load
 
 2. Run the start screen window and hide the game and finish screen at the same time.
@@ -36,20 +36,4 @@
     1. Show the start screen and hide the game and finish screen.
 
     
-// add eventlisteners to each card in the array that shows the card on click
 
-function showCard() 
-{
-    if (this.style.display === 'inline-block') {
-        this.style.display = 'none'
-    } else {
-        this.style.backgroundColor = 'inline-block'
-    }
-}
-
-let boxes = document.getElementsByClassName('i');
-for (let i = 0; i <= 16; i++) {
-    boxes[i].addEventListener('click', showCard);
-}
-   
- */
