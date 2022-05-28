@@ -16,22 +16,10 @@ let username = document.getElementById('name').innerText;
 function showGameScreen() {
     document.getElementById('start-screen').style.display = "none";
     document.getElementById('game-screen').style.display = "block";
-    cardsContainers();
-}
-
-// creates the HTML structure for the cardHolders in the gamescreen
-function cardsContainers() {
-
-    for (let i = 0; i < 16; i++) {
-        let cardHolder = document.createElement('div');
-        cardHolder.className = 'memory-card';
-        cardHolder.innerHTML = '<i class="fa-solid fa-question"></i>';
-        document.getElementById('game').appendChild(cardHolder);
-        cardHolder.addEventListener('click', showCard);
-    }
     cardDeck();
-
 }
+
+// creates the HTML structure and images for the memorycards in the gamescreen
 
 function cardDeck() {
     // creates array with 16 items inside, 8 pairs of two items of the same kind
@@ -61,21 +49,38 @@ function cardDeck() {
     }
     // Sort the above number array into a random order each time it is executed.
     // Credit: this code snippet comes from https://www.w3schools.com/js/js_array_sort.asp.
-    for (let i = number.length - 1; i > 0; i--) {
+    for (let i = cardArray.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
         let k = number[i];
         number[i] = number[j];
         number[j] = k;
     }
-    // inserts an item into the game screen cardHolder
-    for (let i = 0; i < cardArray.length; i++) {
-        let card = document.getElementsByClassName('icon');
-        card[i].innerHTML = cardArray[number[i]];
-    }
 
+    //creates div containers for each memory-card
+    for (let i = 0; i < 16; i++) {
+        // creates each element 
+        let cardDiv = document.createElement('div');
+        let cardImgOne = document.createElement('img');
+        let cardImgTwo = document.createElement('img');
+        // append elements as child of parent elements
+        document.getElementById('game').appendChild(cardDiv);
+        cardDiv.appendChild(cardImgOne);
+        cardDiv.appendChild(cardImgTwo);
+        //creates classnames and IDs for all elements
+        cardDiv.className = 'memory-card';
+        cardImgOne.id = 'card-front';
+        cardImgTwo.id = 'card-back';
+        // add img to each img element
+        cardImgOne.innerHTML = '<i class="fa-solid fa-question"></i>';
+        cardImgTwo.innerHTML = cardArray[number[i]];
+        //add eventlistener to the memory-card div
+        cardDiv.addEventListener('click', flipCard);
+    }
 }
 
-function showCard() {
+
+
+function flipCard() {
     this.style.animation = 'flipEffect';
 
 }

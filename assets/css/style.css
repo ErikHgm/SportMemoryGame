@@ -93,19 +93,6 @@ span {
 
 /* cards holder styling */
 
-.icon {
-    width: 25%;
-    height: 120px;
-    background-color: rgb(16, 16, 73);
-    display: none;
-    border: 1px solid white;
-    border-radius: 7px;
-    box-sizing: border-box;
-    line-height: 120px;
-    color: white;
-    font-size: 10px;
-}
-
 .memory-card {
     width: 25%;
     height: 120px;
