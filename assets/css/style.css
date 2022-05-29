@@ -80,10 +80,9 @@ span {
     border-radius: 10px;
     margin: 10px auto 80px;
     text-align: center;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     padding: 30px;
     box-sizing: border-box;
-
 }
 
 /* start-screen infotext styling */
@@ -92,7 +91,6 @@ span {
 }
 
 /* cards holder styling */
-
 .memory-card {
     width: 25%;
     height: 120px;
@@ -103,11 +101,13 @@ span {
     line-height: 120px;
     font-size: 2em;
     color: black;
-    background-color: #4CAF50;
+    background-color: #4CAF50; 
 }
 
 @keyframes flipEffect {
-  100% {transform: rotateY(180deg);}
+    100% {
+        transform: rotateY(180deg);
+    }
 }
 
 

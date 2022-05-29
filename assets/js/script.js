@@ -21,22 +21,22 @@ function showGameScreen() {
 
 // creates array with 16 items inside, 8 pairs of two items of the same kind
 let cardArray = [
-    '<i class="fa-solid fa-table-tennis-paddle-ball"></i>',
-    '<i class="fa-solid fa-basketball"></i>',
-    '<i class="fa-solid fa-hockey-puck"></i>',
-    '<i class="fa-solid fa-futbol"></i>',
-    '<i class="fa-solid fa-dumbbell"></i>',
-    '<i class="fa-solid fa-baseball-bat-ball"></i>',
-    '<i class="fa-solid fa-person-swimming"></i>',
-    '<i class="fa-solid fa-person-skiing"></i>',
-    '<i class="fa-solid fa-table-tennis-paddle-ball"></i>',
-    '<i class="fa-solid fa-basketball"></i>',
-    '<i class="fa-solid fa-hockey-puck"></i>',
-    '<i class="fa-solid fa-futbol"></i>',
-    '<i class="fa-solid fa-dumbbell"></i>',
-    '<i class="fa-solid fa-baseball-bat-ball"></i>',
-    '<i class="fa-solid fa-person-swimming"></i>',
-    '<i class="fa-solid fa-person-skiing"></i>',
+    'fa-solid fa-table-tennis-paddle-ball',
+    'fa-solid fa-basketball',
+    'fa-solid fa-hockey-puck',
+    'fa-solid fa-futbol',
+    'fa-solid fa-dumbbell',
+    'fa-solid fa-baseball-bat-ball',
+    'fa-solid fa-person-swimming',
+    'fa-solid fa-person-skiing',
+    'fa-solid fa-table-tennis-paddle-ball',
+    'fa-solid fa-basketball',
+    'fa-solid fa-hockey-puck',
+    'fa-solid fa-futbol',
+    'fa-solid fa-dumbbell',
+    'fa-solid fa-baseball-bat-ball',
+    'fa-solid fa-person-swimming',
+    'fa-solid fa-person-skiing',
 ];
 
 // creates an ordered array with numbers less than 16 
@@ -48,7 +48,7 @@ for (let i = 0; i < cardArray.length; i++) {
 function cardShuffle() {
     // Sort the number array into a random order each time it is executed.
     // Credit: this code snippet comes from https://www.w3schools.com/js/js_array_sort.asp.
-    for (let i = cardArray.length - 1; i > 0; i--) {
+    for (let i = number.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
         let k = number[i];
         number[i] = number[j];
@@ -56,31 +56,26 @@ function cardShuffle() {
     }
 }
 
-// creates the HTML structure and images for the memorycards in the gamescreen
+// creates the HTML structure and eventlistener for the memorycards in the gamescreen
 function cardDeck() {
     cardShuffle();
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < cardArray.length; i++) {
         // creates each element 
         let cardDiv = document.createElement('div');
-        let cardImgOne = document.createElement('img');
-        let cardImgTwo = document.createElement('img');
+        let cardFront = document.createElement('div');
         // append elements as child of parent elements
         document.getElementById('game').appendChild(cardDiv);
-        cardDiv.appendChild(cardImgOne);
-        cardDiv.appendChild(cardImgTwo);
-        //creates classnames and IDs for all elements
+        cardDiv.appendChild(cardFront);
+        //creates classnames and data-id 
         cardDiv.className = 'memory-card';
-        cardImgOne.id = 'card-front';
-        cardImgTwo.id = 'card-back';
-        // add img to each img element
-        cardImgOne.innerHTML = '<i class="fa-solid fa-question"></i>';
-        cardImgTwo.innerHTML = cardArray[number[i]];
-        //add eventlistener to the memory-card div
-        cardDiv.addEventListener('click', flipCard);
+        cardFront.className = 'fa-solid fa-question';
+        let dataId = cardArray[number[i]];
+        //add eventlistener to the memory-card div that change the class
+        cardDiv.addEventListener('click', function () {
+                this.style.animation = '0.5s flipEffect';
+                this.innerHTML = (`<i class="${cardArray[number[i]]}"></i>`);
+                this.setAttribute('data-id', dataId);
+            }
+        );
     }
-}
-
-function flipCard() {
-    this.style.animation = 'flipEffect';
-
 }
