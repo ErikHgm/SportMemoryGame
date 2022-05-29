@@ -16,11 +16,12 @@ let username = document.getElementById('name').innerText;
 function showGameScreen() {
     document.getElementById('start-screen').style.display = "none";
     document.getElementById('game-screen').style.display = "block";
+    cardShuffle();
     cardDeck();
 }
 
 // creates array with 16 items inside, 8 pairs of two items of the same kind
-const cardArray = [
+let cardArray = [
     'fa-solid fa-table-tennis-paddle-ball',
     'fa-solid fa-basketball',
     'fa-solid fa-hockey-puck',
@@ -39,34 +40,17 @@ const cardArray = [
     'fa-solid fa-person-skiing',
 ];
 
-// creates an ordered array with numbers less than 16 
-const number = [];
-for (let i = 0; i < cardArray.length; i++) {
-    number.push(i);
-}
-
-function cardShuffle() {
-    // Sort the number array into a random order each time it is executed.
-    // Credit: this code snippet comes from https://www.w3schools.com/js/js_array_sort.asp.
-    for (let i = number.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * i);
-        let k = number[i];
-        number[i] = number[j];
-        number[j] = k;
-    }
-}
-
-// creates the HTML structure and eventlistener for the memorycards in the gamescreen
+// creates the HTML structure for the memorycards in the gamescreen
 function cardDeck() {
-    cardShuffle();
+    cardArray = cardArray.sort(() => Math.random() - 0.5);
     cardArray.forEach(card => {
         const html = `
         <div class="memory-card">
-          <div class="memory-card-card-inner">
-            <div class="memory-card-card-front">
+          <div class="memory-card-inner">
+            <div class="memory-card-front">
               <i class="fa-solid fa-question"></i>    
             </div>
-            <div class="memory-card-card-back">
+            <div class="memory-card-back">
               <i class="${card}"></i>
             </div>
           </div>
@@ -76,4 +60,14 @@ function cardDeck() {
         document.getElementById('game').innerHTML += html;
     })
 
+
+
+const cards = document.querySelectorAll('.memory-card');
+cards.forEach(card => {
+    card.onclick = () => {
+        const cardInner = card.querySelector('.memory-card-inner');
+        cardInner.style.transform = 'rotateY(-180deg)';
+        
+    }
+})
 }
