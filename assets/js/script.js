@@ -20,7 +20,7 @@ function showGameScreen() {
 }
 
 // creates array with 16 items inside, 8 pairs of two items of the same kind
-let cardArray = [
+const cardArray = [
     'fa-solid fa-table-tennis-paddle-ball',
     'fa-solid fa-basketball',
     'fa-solid fa-hockey-puck',
@@ -40,7 +40,7 @@ let cardArray = [
 ];
 
 // creates an ordered array with numbers less than 16 
-let number = [];
+const number = [];
 for (let i = 0; i < cardArray.length; i++) {
     number.push(i);
 }
@@ -59,23 +59,21 @@ function cardShuffle() {
 // creates the HTML structure and eventlistener for the memorycards in the gamescreen
 function cardDeck() {
     cardShuffle();
-    for (let i = 0; i < cardArray.length; i++) {
-        // creates each element 
-        let cardDiv = document.createElement('div');
-        let cardFront = document.createElement('div');
-        // append elements as child of parent elements
-        document.getElementById('game').appendChild(cardDiv);
-        cardDiv.appendChild(cardFront);
-        //creates classnames and data-id 
-        cardDiv.className = 'memory-card';
-        cardFront.className = 'fa-solid fa-question';
-        let dataId = cardArray[number[i]];
-        //add eventlistener to the memory-card div that change the class
-        cardDiv.addEventListener('click', function () {
-                this.style.animation = '0.5s flipEffect';
-                this.innerHTML = (`<i class="${cardArray[number[i]]}"></i>`);
-                this.setAttribute('data-id', dataId);
-            }
-        );
-    }
+    cardArray.forEach(card => {
+        const html = `
+        <div class="memory-card">
+          <div class="memory-card-card-inner">
+            <div class="memory-card-card-front">
+              <i class="fa-solid fa-question"></i>    
+            </div>
+            <div class="memory-card-card-back">
+              <i class="${card}"></i>
+            </div>
+          </div>
+        </div>
+      `;
+
+        document.getElementById('game').innerHTML += html;
+    })
+
 }
