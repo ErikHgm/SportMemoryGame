@@ -51,21 +51,21 @@
 
 - ### The Start Screen 
 
-![Start Screen](assets/images/.png)
+![Start Screen](assets/images/start_screen.png)
 
 - ### The Game Screen
     - 
 
-![The Game Screen](assets/images/.png)
+![The Game Screen](assets/images/game_screen.png)
 
 - ### The Flip Card Feature
     - 
 
-![The Flip Card Feature](assets/images/.png)
+![The Flip Card Feature](assets/images/flip_effect.png)
 - ### The End Screen
     - 
 
-![The End Screen](assets/images/.png)
+![The End Screen](assets/images/finish_screen.png)
 
 - ### The Footer
     - The Footer includes all the social networks links
