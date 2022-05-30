@@ -1,7 +1,8 @@
 <h1 align="center">SportsMemory</h1>
 
 ![Screen Mockup](assets/images/screenmockups.png)
-
+-   This is a memory game with a sports theme for players who are interested in a challenging and fun game that is easy to play and quick to learn.
+    
 
 [View the live website here.](https://erikhgm.github.io/SportsMemory-Game/)
 
@@ -10,44 +11,52 @@
 -   ### User stories
 
     -   #### First Time Visitor Goals
-        As a first time visitor I expect to find 
+        As a first time visitor I expect to find information about how the game is player.  
+        As a first time visitor I expect to be able to easily understand how to navigate the game  
+        As a first time visitor I want to completet the game and finish it
 
-      
     -   #### Returning Visitor Goals
-        As a returning user I expect to be able to 
-
-        
+        As a returning user I want to beat my previous time  
+        As a returning user I want to improve and find the game easier to play as you go along
 
     -   #### Frequent User Goals
-        As frequent user I expect to  
+        As frequent user I expect to be able to complete the game at the best possible time  
 
-        
 
 -   ### Design
     - Color Scheme  
+        For the color scheme I decided to use a gradient color to create more depth and a more dynamic overall look to the game.  
+        The colors I choose are gradients of deep blue and orange-red.
     
 
-      ![Pallette](assets/images/.png)
+      ![Pallette](assets/images/pallette.png)
 
     - Typography  
    
 
 
-        ![font](assets/images/.png)
+        ![font](assets/images/font.png)  
+        For the font I decided to go with the Russo One. I beleive it gives a vibe of old arcade games that I liked and wanted to impelemet into the game and it also looks nice.
 
 
     - Imagery  
+        The icons in the game are choosen to represent a sports theme with various sports related items.
        
 
--  ### Wireframes 
-
+-  ## Wireframes 
+-  ### StartScreen 
+![StartScreen](assets/images/frame1.png)
+-  ### GameScreen 
+![GameScreen](assets/images/frame2.png)
+-  ### EndScreen 
+![EndScreen](assets/images/frame3.png)
 
 ## Existing Features
 
 
 - ### Header
 
-![Header](assets/images/.png)
+![Header](assets/images/header.png)
 
 - ### The Start Screen 
 
