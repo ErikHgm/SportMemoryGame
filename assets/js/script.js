@@ -57,7 +57,7 @@ function cardDeck() {
       `;
 
     document.getElementById('game').innerHTML += html;
-  })
+  });
 // adds click events for each memorycard and rotates them 180 degrees
 // adds a class "turned" to the pair of cards that is being turned
   const cards = document.querySelectorAll('.memory-card');
@@ -65,37 +65,36 @@ function cardDeck() {
     card.onclick = () => {
       const cardInner = card.querySelector('.memory-card-inner');
       cardInner.style.transform = 'rotateY(-180deg)';
-      card.classList.add('turned')
-      turnedCard(card)
-    }
-  })
+      card.classList.add('turned');
+      turnedCard(card);
+    };
+  });
 }
 
 // variables and function for checking if a card is turned 
 // pass the turned cards to the matchedCards function to check for a matching pair
-const card = document.querySelectorAll('.memory-card');
-let selectedCards = []
+let selectedCards = [];
 let firstCard, secondCard = null;
 
 function turnedCard(card) {
-  console.log(card.children[0].children[1].children[0].className)
+  console.log(card.children[0].children[1].children[0].className);
   const cardInner = card.querySelector('.memory-card-inner');
   if (card.classList.contains('turned') && selectedCards.length == 0) {
     firstCard = card;
-    selectedCards.push(firstCard)
-    console.log(card)
-    console.log(selectedCards)
+    selectedCards.push(firstCard);
+    console.log(card);
+    console.log(selectedCards);
   } else if (card.classList.contains('turned')) {
     secondCard = card;
     selectedCards.push(secondCard);
-    selectedCards = []
+    selectedCards = [];
     matchedCards();
   } else {
     setTimeout(() => {
       cardInner.style.transform = 'rotateY(0deg)';
 
     }, 1500);
-    console.log('not-matching')
+    console.log('not-matching');
   }
 }
 // array that stores the pairs that have been matched 
@@ -103,7 +102,7 @@ let matchedCardArray = [];
 
 // function that checks if the pair of cards is matching 
 function matchedCards() {
-  console.log('matched-cards')
+  console.log('matched-cards');
   console.log(firstCard);
   console.log(secondCard);
 
@@ -112,12 +111,12 @@ function matchedCards() {
     // if it is a match store in array
     matchedCardArray.push(firstCard, secondCard);
 
-    console.log('matching')
+    console.log('matching');
     console.log(firstCard);
     console.log(secondCard);
     // removes eventlisteners from the matching cards so they can't be clicked again
-    firstCard.removeEventListener('click', cardDeck)
-    secondCard.removeEventListener('click', cardDeck)
+    firstCard.removeEventListener('click', cardDeck);
+    secondCard.removeEventListener('click', cardDeck);
    
   } else {
     //no match,remove "turned" classname so they can be turned again

@@ -178,17 +178,14 @@ For deployment of the project, I used GitHub Pages by following the below steps:
 ## Credits
 
 ### Code
-- The flip effect 
+- Inspiration on how to do the 3D flip effect came from the Youtube channel: [freeCodeCamp.org](https://www.youtube.com/watch?v=ZniVgo8U7ek). 
 
 ### Content
 - The icons on the memorycards comes from  [FontAwesome](https://fontawesome.com/). 
 
-### Media
-- The images 
-
 ### Acknowledgements
 I would like to thank: 
-- The tutor support team att Code Institute for their support.
+- The tutor support team att Code Institute for their help with code guidance and solutions.
 - My great Code Institute mentor Martina Terlevic for feedback and suggestions.
 
 
