@@ -100,14 +100,14 @@
      - Was used for all storing and backup of the code pertaining to the project. 
 
 ## Testing
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-    - No errors or warnings was shown - [Results]()
+-   [W3C Markup Validator](https://validator.w3.org/) 
+    - Shows errors for missing headings - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Ferikhgm.github.io%2FSportsMemory-Game%2F)
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-    - No errors or warnings was shown - [Results]()
+    - No errors or warnings was shown - [Results](https://jigsaw.w3.org/css-validator/validator)
 
 -   [JSHint JavaScripy Validator](https://jshint.com/) 
-    - No errors or warnings was shown - [Results]()
+    - Missing semicolons errors was shown - Fixed
 
 - [Adobe Color](https://color.adobe.com/create/color-contrast-analyzer)
     - The font color combinations were tested with Adobe color to check contrast levels for accessibility purposes.
