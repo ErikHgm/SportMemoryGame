@@ -87,31 +87,40 @@ function turnedCard(card) {
     console.log(selectedCards)
   } else if (card.classList.contains('turned')) {
     secondCard = card;
+    selectedCards.push(secondCard);
     selectedCards = []
-    matchedCards(firstCard, secondCard);
-  } else(!matchedCards())
+    matchedCards();
+  } else {
+    setTimeout(() => {
+      cardInner.style.transform = 'rotateY(0deg)';
 
-  console.log('not-matching')
+    }, 1500);
+    console.log('not-matching')
 
-  setTimeout(() => {
-    cardInner.style.transform = 'rotateY(180deg)';
 
-  }, 1500);
+  }
 }
-
 
 let matchedCardArray = [];
 
-function matchedCards(firstCard, secondCard) {
-  console.log('matched-cards')
+function matchedCards() {
+  /* console.log('matched-cards')
+  console.log(firstCard);
+  console.log(secondCard); */
 
   if (firstCard.children[0].children[1].children[0].className === secondCard.children[0].children[1].children[0].className) {
     // it is a match
     matchedCardArray.push(firstCard, secondCard);
     console.log('matching')
 
+
+    console.log(firstCard);
+    console.log(secondCard);
+
     firstCard.removeEventListener('click', cardDeck)
     secondCard.removeEventListener('click', cardDeck)
+
+
 
     firstCard = '';
     secondCard = '';
@@ -120,22 +129,43 @@ function matchedCards(firstCard, secondCard) {
     //no match
     firstCard.classList.remove('turned');
     secondCard.classList.remove('turned');
-    console.log('return-false');
-    return false;
+
+
+    console.log('no-match');
   }
 
   if (matchedCardArray.length === 16) {
-
+    
+  
     showFinishScreen();
 
   }
 }
-
-
 function showFinishScreen() {
 
   document.getElementById('game-screen').style.display = "none";
   document.getElementById('finish-screen').style.display = "block";
+  let startbutton = document.getElementById('start-new-button');
+  startbutton.addEventListener('click', restartGame);
+  let quitbutton = document.getElementById('quit-button');
+  quitbutton.addEventListener('click', restartStartScreen);
 }
 
+function restartGame(){
+  document.getElementById('game-screen').style.display = "block";
+  document.getElementById('finish-screen').style.display = "none";
+  let oldGameScreen = document.getElementById("game");
+  oldGameScreen.innerHTML = "";
+  matchedCardArray = [];
+  cardDeck();
+}
 
+function restartStartScreen(){
+  document.getElementById('start-screen').style.display = "block";
+  document.getElementById('finish-screen').style.display = "none";
+  let startbutton = document.getElementById('start-button');
+  startbutton.addEventListener('click', showGameScreen);
+  let oldGameScreen = document.getElementById("game");
+  oldGameScreen.innerHTML = "";
+  matchedCardArray = [];
+}
