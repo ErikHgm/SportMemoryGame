@@ -19,7 +19,7 @@ function showGameScreen() {
   cardDeck();
 }
 
-// creates array with 16 items inside, 8 pairs of two items of the same kind
+// array that stores the memorycards, 8 pairs of two items of the same kind
 let cardArray = [
   'fa-solid fa-table-tennis-paddle-ball',
   'fa-solid fa-basketball',
@@ -58,9 +58,8 @@ function cardDeck() {
 
     document.getElementById('game').innerHTML += html;
   })
-
-
-
+// adds click events for each memorycard and rotates them 180 degrees
+// adds a class "turned" to the pair of cards that is being turned
   const cards = document.querySelectorAll('.memory-card');
   cards.forEach(card => {
     card.onclick = () => {
@@ -72,7 +71,8 @@ function cardDeck() {
   })
 }
 
-
+// variables and function for checking if a card is turned 
+// pass the turned cards to the matchedCards function to check for a matching pair
 const card = document.querySelectorAll('.memory-card');
 let selectedCards = []
 let firstCard, secondCard = null;
@@ -96,51 +96,47 @@ function turnedCard(card) {
 
     }, 1500);
     console.log('not-matching')
-
-
   }
 }
-
+// array that stores the pairs that have been matched 
 let matchedCardArray = [];
 
+// function that checks if the pair of cards is matching 
 function matchedCards() {
-  /* console.log('matched-cards')
+  console.log('matched-cards')
   console.log(firstCard);
-  console.log(secondCard); */
+  console.log(secondCard);
 
+  // compares the classname for matching of the two cards that the user clicked on
   if (firstCard.children[0].children[1].children[0].className === secondCard.children[0].children[1].children[0].className) {
-    // it is a match
+    // if it is a match store in array
     matchedCardArray.push(firstCard, secondCard);
+
     console.log('matching')
-
-
     console.log(firstCard);
     console.log(secondCard);
-
+    // removes eventlisteners from the matching cards so they can't be clicked again
     firstCard.removeEventListener('click', cardDeck)
     secondCard.removeEventListener('click', cardDeck)
-
-
-
-    firstCard = '';
-    secondCard = '';
-
+   
   } else {
-    //no match
+    //no match,remove "turned" classname so they can be turned again
     firstCard.classList.remove('turned');
     secondCard.classList.remove('turned');
-
-
     console.log('no-match');
   }
-
+  // if the matchedCardArray has 16 items, all cards have been matched and the game is finished
   if (matchedCardArray.length === 16) {
-    
-  
     showFinishScreen();
-
   }
+   // clears the variables firstCard & secondCard so they can be reused by the turnedCard function
+   firstCard = '';
+   secondCard = '';
+  
+
 }
+
+// shows the finish screen when all the cards have been matched
 function showFinishScreen() {
 
   document.getElementById('game-screen').style.display = "none";
@@ -151,7 +147,10 @@ function showFinishScreen() {
   quitbutton.addEventListener('click', restartStartScreen);
 }
 
-function restartGame(){
+// restarts the game and shows game screen again when user clicks on start new game in the finish screen
+// resets the game screen html and matchedCardArray
+
+function restartGame() {
   document.getElementById('game-screen').style.display = "block";
   document.getElementById('finish-screen').style.display = "none";
   let oldGameScreen = document.getElementById("game");
@@ -159,8 +158,9 @@ function restartGame(){
   matchedCardArray = [];
   cardDeck();
 }
-
-function restartStartScreen(){
+// swithes to the start screen when user clicks on quit game in the finish screen
+// resets the game screen html and matchedCardArray
+function restartStartScreen() {
   document.getElementById('start-screen').style.display = "block";
   document.getElementById('finish-screen').style.display = "none";
   let startbutton = document.getElementById('start-button');
