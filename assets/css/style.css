@@ -33,7 +33,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -90,7 +90,7 @@ span {
     margin: 20px 0;
 }
 
-/* cards holder styling */
+/* memorycard holder styling */
 .memory-card {
     width: 20%;
     height: 120px;
@@ -101,7 +101,7 @@ span {
     line-height: 120px;
     font-size: 2.5em;
     perspective: 1000px;
-    
+
 }
 
 .memory-card-inner {
@@ -164,4 +164,20 @@ button {
     font-family: 'Russo One', sans-serif;
     color: rgb(18, 18, 18);
 
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper {
+        width: 600px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 450px;
+        margin: 0 auto;
+        padding: 0;
+    }
 }
