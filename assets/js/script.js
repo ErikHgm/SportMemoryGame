@@ -20,7 +20,8 @@ function showGameScreen() {
 }
 
 // creates array with 16 items inside, 8 pairs of two items of the same kind
-let cardArray = ['fa-solid fa-table-tennis-paddle-ball',
+let cardArray = [
+  'fa-solid fa-table-tennis-paddle-ball',
   'fa-solid fa-basketball',
   'fa-solid fa-hockey-puck',
   'fa-solid fa-futbol',
@@ -71,9 +72,9 @@ function cardDeck() {
   })
 }
 
+
 const card = document.querySelectorAll('.memory-card');
 let selectedCards = []
-
 let firstCard, secondCard = null;
 
 function turnedCard(card) {
@@ -97,7 +98,6 @@ function turnedCard(card) {
 
   }, 1500);
 }
-
 
 
 let matchedCardArray = [];
@@ -137,3 +137,5 @@ function showFinishScreen() {
   document.getElementById('game-screen').style.display = "none";
   document.getElementById('finish-screen').style.display = "block";
 }
+
+
