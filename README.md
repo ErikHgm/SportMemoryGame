@@ -32,12 +32,8 @@
       ![Pallette](assets/images/pallette.png)
 
     - Typography  
-   
-
-
         ![font](assets/images/font.png)  
-        For the font I decided to go with the Russo One. I beleive it gives a vibe of old arcade games that I liked and wanted to impelemet into the game and it also looks nice.
-
+        For the font I decided to go with the Russo One. I beleive it gives a vibe of old arcade games that I liked and wanted to implement into the game, it looks nice as well.
 
     - Imagery  
         The icons in the game are choosen to represent a sports theme with various sports related items.
@@ -54,25 +50,33 @@
 ## Existing Features
 
 
-- ### Header
+- ### Header  
+    -   The header welcomes the player when entering the game page.  
+    -   It also swith the message as you move along the different screens of the game.
 
 ![Header](assets/images/header.png)
+![Header](assets/images/header2.png)
+![Header](assets/images/header3.png)
 
 - ### The Start Screen 
+    -   The start screen explains in a concise and clear manner the rules of the game to the user.
+    -   It makes it easy for the user to get started and the start button is easily accessible and visible.
 
 ![Start Screen](assets/images/start_screen.png)
 
 - ### The Game Screen
-    - 
+    - The Game Screen arrange all the cards with the back facing towards the user.
+    - When the user clicks on a card it shows it's icon and that way the user can try to remember each card and match the cards to eachother.
 
 ![The Game Screen](assets/images/game_screen.png)
 
 - ### The Flip Card Feature
-    - 
+    - When the player clicks on a card, the flip effect turns the card around and displays the content in a eye pleasing way.
 
 ![The Flip Card Feature](assets/images/flip_effect.png)
 - ### The End Screen
-    - 
+    - Shows the time that the user completed the game in.
+    - Also includes the buttons to start over or quitting the game.
 
 ![The End Screen](assets/images/finish_screen.png)
 
