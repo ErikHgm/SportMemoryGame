@@ -18,7 +18,6 @@ function showGameScreen() {
     document.getElementById('start-screen').style.display = "none";
   document.getElementById('game-screen').style.display = "block";
   }, 500);
-  
   cardDeck();
   
 }
@@ -112,7 +111,6 @@ function matchCards() {
     //no match,remove "turned" classname so they can be turned again
     firstCard.classList.remove('turned');
     secondCard.classList.remove('turned');
-
     // variables and function for flipping the card back 
     let firtsCardStyle = firstCard.children[0];
     let secondCardStyle = secondCard.children[0];
