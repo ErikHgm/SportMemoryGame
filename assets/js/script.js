@@ -144,7 +144,7 @@ function matchCards() {
 
 // shows the finish screen when all the cards have been matched
 function showFinishScreen() {
-  document.getElementById('game-screen').style.display = "none";
+  dopdate fincument.getElementById('game-screen').style.display = "none";
   document.getElementById('finish-screen').style.display = "block";
   document.getElementById('time').innerHTML = `${seconds}s!`;
   let startbutton = document.getElementById('start-new-button');
