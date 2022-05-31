@@ -148,7 +148,8 @@
     -   [Responsivetesttool](http://responsivetesttool.com/)
     -   [Google Devtools](https://developer.chrome.com/docs/devtools/open/)
 - The flip function and logic behind it has been tested thoroughly to make sure it works as intended.
-- Google lighthouse was used to further test and validate the practices used during the development of the application
+- Google lighthouse was used to further test and validate the practices used during the development of the application  
+
     ![Google Lighthouse](assets/images/lighthouse.png)
 
 
