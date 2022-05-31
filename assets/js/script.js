@@ -132,7 +132,7 @@ function matchCards() {
   }
 
   // if the matchedCardArray has 16 items, all cards have been matched and the game is finished
-  if (matchedCardsArray.length === 2) {
+  if (matchedCardsArray.length === 16) {
     setTimeout(() => {
       showFinishScreen();
     }, 1700);
