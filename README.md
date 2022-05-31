@@ -63,14 +63,14 @@
 - ### The Start Screen 
     -   The start screen explains in a concise and clear manner the rules of the game to the user.
     -   It makes it easy for the user to get started and the start button is easily accessible and visible.
-    -   The start also shows all the various social media links to connect with. 
+    -   The start screen also shows all the various social media links to connect with. 
 
 ![Start Screen](assets/images/start_screen.png)
 
 - ### The Game Screen
-    - The Game Screen arrange all the cards with the back facing towards the user.
+    - The game screen arrange all the cards with the back facing towards the user.
     - When the user clicks on a card it shows it's icon and that way the user can try to remember each card and match the cards to eachother.
-    - The Game Screen also shows the timer which counts the seconds it takes the user to finish the game.
+    - The game screen also shows the timer which counts the seconds it takes the user to finish the game.
 
 ![The Game Screen](assets/images/game_screen.png)
 
@@ -141,11 +141,12 @@
 ### Known Bugs
 |Bug | Solution | Status |
 |----|:---------|:-------|
-|  ... |  ...    | Fixed |
+| If you click on the same card twice it counts as a match |  Debug the onclick attributes    | incomplete |
 
 
 
-
+## Features left to implement
+-   A highscore list that stores and displays the top 5 best times that the user managed to complete the game in.
 
 ## Deployment
 
@@ -190,5 +191,6 @@ For deployment of the project, I used GitHub Pages by following the below steps:
 I would like to thank: 
 - The tutor support team att Code Institute for their help with code guidance and solutions.
 - My great Code Institute mentor Martina Terlevic for feedback and suggestions.
+- W3Scools for tips and trix [W3Schools](https://www.w3schools.com/ ).
 
 

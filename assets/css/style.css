@@ -233,6 +233,6 @@ button:active {
 
 @media screen and (max-width: 500px) {
     .wrapper {
-        width: 450px;
+        width: 320px;
     }
 }
