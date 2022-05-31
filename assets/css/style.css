@@ -24,6 +24,12 @@ header {
     color: rgb(174, 34, 226)
 }
 
+h2,
+h3 {
+    font-size: 1.3em;
+    color: purple;
+}
+
 /* wrapper settings */
 
 .wrapper {
@@ -167,6 +173,7 @@ button {
     display: inline;
     color: deeppink;
 }
+
 #social-media {
     margin: 0 auto;
     text-align: center;
