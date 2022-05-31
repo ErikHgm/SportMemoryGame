@@ -28,7 +28,7 @@
 -   ### Design
     - Color Scheme  
         For the color scheme I decided to use a gradient color to create more depth and a more dynamic overall look to the game.  
-        The colors I choose are gradients of deep blue and orange-red.
+        The colors I chose are gradients of blue and green.
     
 
       ![Pallette](assets/images/pallette.png)
@@ -56,19 +56,21 @@
     -   The header welcomes the player when entering the game page.  
     -   It also swith the message as you move along the different screens of the game.
 
-![Header](assets/images/header.png)
+![Header](assets/images/header1.png)
 ![Header](assets/images/header2.png)
 ![Header](assets/images/header3.png)
 
 - ### The Start Screen 
     -   The start screen explains in a concise and clear manner the rules of the game to the user.
     -   It makes it easy for the user to get started and the start button is easily accessible and visible.
+    -   The start also shows all the various social media links to connect with. 
 
 ![Start Screen](assets/images/start_screen.png)
 
 - ### The Game Screen
     - The Game Screen arrange all the cards with the back facing towards the user.
     - When the user clicks on a card it shows it's icon and that way the user can try to remember each card and match the cards to eachother.
+    - The Game Screen also shows the timer which counts the seconds it takes the user to finish the game.
 
 ![The Game Screen](assets/images/game_screen.png)
 
@@ -81,11 +83,6 @@
     - Also includes the buttons to start over or quitting the game.
 
 ![The End Screen](assets/images/finish_screen.png)
-
-- ### The Footer
-    - The Footer includes all the social networks links
-
-![The Footer](assets/images/.png)
 
 
 ## Technologies Used
@@ -101,7 +98,7 @@
  - [Font Awesome:](https://fontawesome.com/)
     - Is used for the social media icons in the footer on all pages. 
  - [Git](https://git-scm.com/)
-    - Git was used for version control through the Gitpod terminal to commit and push to GitHub
+    - Git was used for version control through the Gitpod terminal to commit and push to GitHub.
  - [GitHub:](https://github.com/)
      - Was used for all storing and backup of the code pertaining to the project. 
 
