@@ -13,7 +13,7 @@
 body {
     font-family: 'Russo One', sans-serif;
     min-height: 100vh;
-    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    background-image: linear-gradient(to bottom right, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
 }
 
 /* header & headings */
@@ -32,7 +32,7 @@ h3 {
 /* wrapper settings */
 
 .wrapper {
-    width: 550px;
+    width: 500px;
     height: 700px;
     margin: 0 auto;
 }
@@ -52,7 +52,7 @@ h3 {
 }
 
 .screens {
-    width: 80%;
+    width: 100%;
     height: 80%;
     border-radius: 20px;
     margin: 10px auto 0;
@@ -94,7 +94,7 @@ h3 {
     margin: 10px auto 80px;
     text-align: center;
     background-color: whitesmoke;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -105,7 +105,7 @@ h3 {
 
 /* memorycard holder styling */
 .memory-card {
-    width: 20%;
+    width: 23%;
     height: 120px;
     display: inline-block;
     border: 1px solid white;
@@ -209,7 +209,7 @@ button:active {
 /* media queries */
 @media screen and (min-width: 700px) {
     .wrapper {
-        width: 700px;
+        width: 500px;
         height: 700px;
         position: absolute;
         top: 50%;
@@ -233,6 +233,11 @@ button:active {
 
 @media screen and (max-width: 500px) {
     .wrapper {
-        width: 320px;
+        width: 450px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .wrapper {
+        width: 370px;
     }
 }

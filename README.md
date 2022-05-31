@@ -135,13 +135,18 @@
 
 
 ### Further Testing
--   The game has been thoroughly 
+-   The website has been thoroughly tested on various  browsers such as Internet Explorer, Google Chrome, Firefox, Safar and Microsoft Edge. 
+-   Adaptation to different devices to make sure it scales properly has been tested using the below tools:
+    -   [Responsivetesttool](http://responsivetesttool.com/)
+    -   [Google Devtools](https://developer.chrome.com/docs/devtools/open/)
+- The flip function and logic behind it has been tested thoroughly to make sure it works as intended.
 
 
 ### Known Bugs
 |Bug | Solution | Status |
 |----|:---------|:-------|
-| If you click on the same card twice it counts as a match |  Debug the onclick attributes    | incomplete |
+| If you click on the same card twice it counts as a match |  Debug the onclick attributes    | in progress |
+| Responsiveness for mobile devices |  Debug with devtools and reduce the wrapper size and padding    | solved |
 
 
 
