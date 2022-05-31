@@ -20,7 +20,7 @@ body {
 header {
     margin: 0 auto;
     text-align: center;
-    color: rgb(226, 172, 34)
+    color: rgb(215, 17, 215);
 }
 
 h2,
@@ -32,15 +32,11 @@ h3 {
 /* wrapper settings */
 
 .wrapper {
-    width: 700px;
+    width: 500px;
     height: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     margin: 0 auto;
-    padding: 0;
 }
+
 
 /* screens styling */
 #start-screen {
@@ -62,8 +58,9 @@ h3 {
     margin: 10px auto 0;
     text-align: center;
     padding: 10px 0;
-    background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
 }
+
 #highscore {
     margin-top: 70px;
 }
@@ -151,12 +148,11 @@ h3 {
 
 .memory-card-front {
     color: white;
-    background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
-}
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);}
 
 .memory-card-back {
     color: white;
-    background-color: black;
+    background-color: rgb(19, 4, 72);
     transform: rotateY(180deg);
 }
 
@@ -202,13 +198,20 @@ button {
 }
 
 /* media queries */
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
     .wrapper {
-        width: 600px;
+        width: 700px;
+        height: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         margin: 0 auto;
         padding: 0;
-
     }
+}
+
+@media screen and (max-width: 699px) {
 
     .inside-screen {
         padding: 10px;
