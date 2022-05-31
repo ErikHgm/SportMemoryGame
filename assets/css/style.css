@@ -20,7 +20,7 @@ body {
 header {
     margin: 0 auto;
     text-align: center;
-    color: rgb(215, 17, 215);
+    color: red
 }
 
 h2,
@@ -32,7 +32,7 @@ h3 {
 /* wrapper settings */
 
 .wrapper {
-    width: 500px;
+    width: 550px;
     height: 700px;
     margin: 0 auto;
 }
@@ -148,7 +148,8 @@ h3 {
 
 .memory-card-front {
     color: white;
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);}
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
 
 .memory-card-back {
     color: white;
@@ -174,10 +175,20 @@ button {
 
 }
 
+button:hover {
+    background: linear-gradient(yellow, rgb(208, 160, 1));
+    color: rgb(18, 18, 18);
+}
+
+button:active{
+    background: linear-gradient(rgb(255, 234, 0), rgb(255, 196, 0));
+    color: rgb(18, 18, 18);
+}
+
 /* timer clock styling */
 #timer {
     display: inline;
-    color: deeppink;
+    color: rgb(255, 231, 20);
 }
 
 /* social media section styling */
@@ -225,7 +236,5 @@ button {
 @media screen and (max-width: 500px) {
     .wrapper {
         width: 450px;
-        margin: 0 auto;
-        padding: 0;
     }
 }
