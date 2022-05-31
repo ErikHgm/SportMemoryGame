@@ -2,12 +2,14 @@
 document.addEventListener('DOMContentLoaded', function () {
   showStartScreen();
 });
+
 // shows the startscreen upon entering the game and runs the startbutton eventlistener
 function showStartScreen() {
   document.getElementById('start-screen').style.display = "block";
   let startbutton = document.getElementById('start-button');
   startbutton.addEventListener('click', showGameScreen);
 }
+
 // collets the name from the player
 var username = document.getElementById('name').value;
 
@@ -19,7 +21,7 @@ function showGameScreen() {
     document.getElementById('game-screen').style.display = "block";
   }, 400);
 
-  cardDeck();  
+  cardDeck();
   timer();
 
 }
@@ -131,7 +133,7 @@ function matchCards() {
   }
 
   // if the matchedCardArray has 16 items, all cards have been matched and the game is finished
-  if (matchedCardsArray.length === 16) {
+  if (matchedCardsArray.length === 2) {
     setTimeout(() => {
       showFinishScreen();
     }, 1700);
