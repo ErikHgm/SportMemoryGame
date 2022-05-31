@@ -7,16 +7,20 @@ function showStartScreen() {
   document.getElementById('start-screen').style.display = "block";
   let startbutton = document.getElementById('start-button');
   startbutton.addEventListener('click', showGameScreen);
-
 }
 // collets the name from the player
 let username = document.getElementById('name').innerText;
 
 // switches to the game screen and runs the cardsContainer function
 function showGameScreen() {
-  document.getElementById('start-screen').style.display = "none";
+
+  setTimeout(() => {
+    document.getElementById('start-screen').style.display = "none";
   document.getElementById('game-screen').style.display = "block";
+  }, 500);
+  
   cardDeck();
+  
 }
 
 // array that stores the memorycards, 8 pairs of two items of the same kind
@@ -58,8 +62,8 @@ function cardDeck() {
 
     document.getElementById('game').innerHTML += html;
   });
-// adds click events for each memorycard and rotates them 180 degrees
-// adds a class "turned" to the pair of cards that is being turned
+  // adds click events for each memorycard and rotates them 180 degrees
+  // adds a class "turned" to the pair of cards that is being turned
   const cards = document.querySelectorAll('.memory-card');
   cards.forEach(card => {
     card.onclick = () => {
@@ -77,61 +81,57 @@ let selectedCards = [];
 let firstCard, secondCard = null;
 
 function turnedCard(card) {
-  console.log(card.children[0].children[1].children[0].className);
-  const cardInner = card.querySelector('.memory-card-inner');
   if (card.classList.contains('turned') && selectedCards.length == 0) {
     firstCard = card;
     selectedCards.push(firstCard);
-    console.log(card);
-    console.log(selectedCards);
+
   } else if (card.classList.contains('turned')) {
     secondCard = card;
     selectedCards.push(secondCard);
     selectedCards = [];
-    matchedCards();
-  } else {
-    setTimeout(() => {
-      cardInner.style.transform = 'rotateY(0deg)';
-
-    }, 1500);
-    console.log('not-matching');
+    matchCards();
   }
 }
+
 // array that stores the pairs that have been matched 
-let matchedCardArray = [];
+let matchedCardsArray = [];
 
 // function that checks if the pair of cards is matching 
-function matchedCards() {
-  console.log('matched-cards');
-  console.log(firstCard);
-  console.log(secondCard);
+function matchCards() {
 
   // compares the classname for matching of the two cards that the user clicked on
   if (firstCard.children[0].children[1].children[0].className === secondCard.children[0].children[1].children[0].className) {
     // if it is a match store in array
-    matchedCardArray.push(firstCard, secondCard);
+    matchedCardsArray.push(firstCard, secondCard);
 
-    console.log('matching');
-    console.log(firstCard);
-    console.log(secondCard);
     // removes eventlisteners from the matching cards so they can't be clicked again
-    firstCard.removeEventListener('click', cardDeck);
-    secondCard.removeEventListener('click', cardDeck);
-   
+    firstCard.onclick = null;
+    secondCard.onclick = null;
+
   } else {
     //no match,remove "turned" classname so they can be turned again
     firstCard.classList.remove('turned');
     secondCard.classList.remove('turned');
-    console.log('no-match');
+
+    // variables and function for flipping the card back 
+    let firtsCardStyle = firstCard.children[0];
+    let secondCardStyle = secondCard.children[0];
+
+    setTimeout(() => {
+      firtsCardStyle.style.transform = 'rotateY(0deg)';
+        secondCardStyle.style.transform = 'rotateY(0deg)';
+    }, 800);
   }
+
   // if the matchedCardArray has 16 items, all cards have been matched and the game is finished
-  if (matchedCardArray.length === 16) {
-    showFinishScreen();
+  if (matchedCardsArray.length === 16) {
+    setTimeout(() => {
+      showFinishScreen();
+    }, 2500);
   }
-   // clears the variables firstCard & secondCard so they can be reused by the turnedCard function
-   firstCard = '';
-   secondCard = '';
-  
+  // clears the variables firstCard & secondCard so they can be reused by the turnedCard function
+  firstCard = '';
+  secondCard = '';
 
 }
 
@@ -154,7 +154,7 @@ function restartGame() {
   document.getElementById('finish-screen').style.display = "none";
   let oldGameScreen = document.getElementById("game");
   oldGameScreen.innerHTML = "";
-  matchedCardArray = [];
+  matchedCardsArray = [];
   cardDeck();
 }
 // swithes to the start screen when user clicks on quit game in the finish screen
@@ -166,5 +166,5 @@ function restartStartScreen() {
   startbutton.addEventListener('click', showGameScreen);
   let oldGameScreen = document.getElementById("game");
   oldGameScreen.innerHTML = "";
-  matchedCardArray = [];
+  matchedCardsArray = [];
 }
