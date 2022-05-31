@@ -12,16 +12,16 @@
 
     -   #### First Time Visitor Goals
         As a first time visitor I expect to find information about how the game is player.  
-        As a first time visitor I expect to be able to easily understand how to navigate the game  
-        As a first time visitor I want to complete the game and finish it
+        As a first time visitor I expect to be able to easily understand how to navigate the game. 
+        As a first time visitor I want to complete the game and finish it.
 
     -   #### Returning Visitor Goals
-        As a returning user I want to beat my previous time  
-        As a returning user I want to improve and find the game easier to play as you go along
+        As a returning user I want to beat my previous time.  
+        As a returning user I want to improve and find the game easier to play as you go along.
 
     -   #### Frequent User Goals
-        As frequent user I expect to be able to complete the game at the best possible time  
-        As frequent user I expect the game to run smoothly and funcion as intended.
+        As frequent user I expect to be able to complete the game at the best possible time.  
+        As frequent user I expect the game to run smoothly and function as intended.
 
 
 
@@ -35,10 +35,10 @@
 
     - Typography  
         ![font](assets/images/font.png)  
-        For the font I decided to go with the Russo One. I beleive it gives a vibe of old arcade games that I liked and wanted to implement into the game, it looks nice as well.
+        For the font I decided to go with the Russo One. I believe it gives a vibe of old arcade games that I liked and wanted to implement into the game, it looks nice as well.
 
     - Imagery  
-        The icons in the game are choosen to represent a sports theme with various sports related items.
+        The icons in the game are chosen to represent a sports theme with various sports related items.
        
 
 -  ## Wireframes 
@@ -54,7 +54,7 @@
 
 - ### Header  
     -   The header welcomes the player when entering the game page.  
-    -   It also swith the message as you move along the different screens of the game.
+    -   It also switches the message as you move over the different screens of the game.
 
 ![Header](assets/images/header1.png)
 ![Header](assets/images/header2.png)
@@ -69,7 +69,7 @@
 
 - ### The Game Screen
     - The game screen arrange all the cards with the back facing towards the user.
-    - When the user clicks on a card it shows it's icon and that way the user can try to remember each card and match the cards to eachother.
+    - When the user clicks on a card it shows its icon and that way the user can try to remember each card and match the cards to each other.
     - The game screen also shows the timer which counts the seconds it takes the user to finish the game.
 
 ![The Game Screen](assets/images/game_screen.png)
@@ -104,10 +104,10 @@
 
 ## Testing
 -   [W3C Markup Validator](https://validator.w3.org/) 
-    - Shows errors for missing headings - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Ferikhgm.github.io%2FSportsMemory-Game%2F)
+    - No releveant errors are shown - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Ferikhgm.github.io%2FSportsMemory-Game%2F)
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-    - No errors or warnings was shown - [Results](https://jigsaw.w3.org/css-validator/validator)
+    - No releveant errors are shown - [Results](https://jigsaw.w3.org/css-validator/validator)
 
 -   [JSHint JavaScripy Validator](https://jshint.com/) 
     - Missing semicolons errors was shown - Fixed
@@ -117,25 +117,33 @@
 
 
 ### Testing User Stories from User Experience (UX) Section
-
 -   #### First Time Visitor Goals
-    -   As a first time visitor I expect to 
-
-
+    -  As a first time visitor I expect to find information about how the game is player.  
+        -   When entering the game site, the rules of the game are shown immediately to the user.
+    -  As a first time visitor I expect to be able to easily understand how to navigate the game. 
+        -   Upon entering the game it is easily discoverable where to click in order to go to the next step.
+    -  As a first time visitor I want to complete the game and finish it
+        -   When starting the game one can explore how it functions and finish it in their own pace at the beginning.
 
 
 -   #### Returning Visitor Goals
-    - As a returning user I expect to
+    -  As a returning user I want to beat my previous time 
+        -    The game incorporates a timer that shows the time it took to complete the game. This can provide for the user to set as a goal to beat the previous time.
+    -  As a returning user I want to improve and find the game easier to play as you go along
+        -   After the first couple of tries in game, it gets easier and quicker to use the interface.
 
     
 
 -   #### Frequent User Goals
-    - As frequent user I expect
+    -  As frequent user I expect to be able to complete the game at the best possible time.
+        -    Once the user get to know how the game functions the chances of improving the time is greatly increased.
+    -  As frequent user I expect the game to run smoothly and function as intended.
+        -   The game has been thoroughly tested in order to provide the best possible user-experience without any issues that can interfere with the user.
 
 
 
 ### Further Testing
--   The website has been thoroughly tested on various  browsers such as Internet Explorer, Google Chrome, Firefox, Safar and Microsoft Edge. 
+-   The website has been thoroughly tested on various  browsers such as Internet Explorer, Google Chrome, Firefox, Safari and Microsoft Edge. 
 -   Adaptation to different devices to make sure it scales properly has been tested using the below tools:
     -   [Responsivetesttool](http://responsivetesttool.com/)
     -   [Google Devtools](https://developer.chrome.com/docs/devtools/open/)
@@ -195,7 +203,7 @@ For deployment of the project, I used GitHub Pages by following the below steps:
 
 ### Acknowledgements
 I would like to thank: 
-- The tutor support team att Code Institute for their help with code guidance and solutions.
+- The tutor support team at Code Institute for their help with code guidance and solutions.
 - My great Code Institute mentor Martina Terlevic for feedback and suggestions.
 - W3Scools for tips and trix [W3Schools](https://www.w3schools.com/ ).
 
