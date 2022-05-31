@@ -10,9 +10,6 @@ function showStartScreen() {
   startbutton.addEventListener('click', showGameScreen);
 }
 
-// collets the name from the player
-var username = document.getElementById('name').value;
-
 // switches to the game screen and runs the cardsContainer function
 function showGameScreen() {
 
