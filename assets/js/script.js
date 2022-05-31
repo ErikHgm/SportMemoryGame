@@ -16,10 +16,10 @@ function showGameScreen() {
 
   setTimeout(() => {
     document.getElementById('start-screen').style.display = "none";
-  document.getElementById('game-screen').style.display = "block";
-  }, 500);
+    document.getElementById('game-screen').style.display = "block";
+  }, 400);
   cardDeck();
-  
+
 }
 
 // array that stores the memorycards, 8 pairs of two items of the same kind
@@ -117,7 +117,7 @@ function matchCards() {
 
     setTimeout(() => {
       firtsCardStyle.style.transform = 'rotateY(0deg)';
-        secondCardStyle.style.transform = 'rotateY(0deg)';
+      secondCardStyle.style.transform = 'rotateY(0deg)';
     }, 800);
   }
 
@@ -125,7 +125,7 @@ function matchCards() {
   if (matchedCardsArray.length === 16) {
     setTimeout(() => {
       showFinishScreen();
-    }, 2500);
+    }, 1700);
   }
   // clears the variables firstCard & secondCard so they can be reused by the turnedCard function
   firstCard = '';

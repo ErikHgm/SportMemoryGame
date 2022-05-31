@@ -13,7 +13,7 @@
     -   #### First Time Visitor Goals
         As a first time visitor I expect to find information about how the game is player.  
         As a first time visitor I expect to be able to easily understand how to navigate the game  
-        As a first time visitor I want to completet the game and finish it
+        As a first time visitor I want to complete the game and finish it
 
     -   #### Returning Visitor Goals
         As a returning user I want to beat my previous time  
@@ -21,6 +21,8 @@
 
     -   #### Frequent User Goals
         As frequent user I expect to be able to complete the game at the best possible time  
+        As frequent user I expect the game to run smoothly and funcion as intended.
+
 
 
 -   ### Design
