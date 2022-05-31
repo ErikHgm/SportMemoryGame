@@ -181,12 +181,13 @@ button {
     color: rgb(18, 18, 18);
 
 }
-
+/* timer clock styling */
 #timer {
     display: inline;
     color: deeppink;
 }
 
+/* social media section styling */
 #social-media {
     margin: 0 auto;
     text-align: center;

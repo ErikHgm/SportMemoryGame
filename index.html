@@ -15,6 +15,7 @@
 <body>
     <!-- this screen is the default screen when visiting the website -->
     <div id="start-screen" class="wrapper">
+        <!-- -header and headings -->
         <header>
             <h1>Welcome to SportsMemory!</h1>
         </header>
@@ -36,7 +37,7 @@
                     <p>
                         <input type="text" id="name">
             </div>
-            <div>
+            <div><!-- social media section -->
                 <ul id="social-media">
                     <li>
                         <a href="http://www.facebook.com" target="_blank" rel="noopener"
@@ -61,12 +62,13 @@
                 </ul>
             </div>
         </section>
+        <!-- footer / start button -->
         <footer class="button">
             <button id="start-button" type="submit">Start Game!</button>
         </footer>
 
     </div>
-    <!-- the game screen shows when clicking the submit button - Start game! It is controlled by Javascript. -->
+    <!-- the game screen shows when clicking the submit button - Start game! It is controlled in script.js. -->
     <div id="game-screen" class="wrapper">
         <header>
             <h1>Good Luck! <div id="timer">0</div>
@@ -78,7 +80,7 @@
 
         </section>
     </div>
-    <!-- the finish wrapper is displayed after the game is completed by the user. It is controlled by Javascript. -->
+    <!-- the finish wrapper is displayed after the game is completed by the user. It is controlled in script.js. -->
     <div id="finish-screen" class="wrapper">
         <header>
             <h1>GAME FINISHED!</h1>
@@ -93,12 +95,13 @@
                 </div>
             </div>
         </section>
+        <!-- restart ang quit game buttons-->
         <div class="button">
             <button id='start-new-button' type="submit">Start New Game!</button>
             <button id='quit-button' type="submit">Quit Game!</button>
         </div>
     </div>
-
+    <!-- javascript and fontawesome file links -->
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/d2d5fe6d3e.js" crossorigin="anonymous"></script>
 </body>
