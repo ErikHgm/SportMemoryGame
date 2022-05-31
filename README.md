@@ -1,7 +1,7 @@
 <h1 align="center">SportsMemory</h1>
 
 ![Screen Mockup](assets/images/screenmockups.png)
--   This is a memory game with a sports theme for players who are interested in a challenging and fun game that is easy to play and quick to learn.
+-   SportsMemory is a memory game with a sports theme for players who are interested in a challenging and fun game that is easy to play and quick to learn. With a timer that checks the time it takes to complete the game, the user gets challenged to improve the time and play again. The game is intended for an audience that are looking for a quick and fun game that is challening and something you can play on the go with your mobile device.
     
 
 [View the live website here.](https://erikhgm.github.io/SportsMemory-Game/)
@@ -38,7 +38,7 @@
         For the font I decided to go with the Russo One. I believe it gives a vibe of old arcade games that I liked and wanted to implement into the game, it looks nice as well.
 
     - Imagery  
-        The icons in the game are chosen to represent a sports theme with various sports related items.
+        The icons in the game are chosen to represent a sports theme with various sports related icons.
        
 
 -  ## Wireframes 
@@ -75,7 +75,7 @@
 ![The Game Screen](assets/images/game_screen.png)
 
 - ### The Flip Card Feature
-    - When the player clicks on a card, the flip effect turns the card around and displays the content in a eye pleasing way.
+    - When the player clicks on a card, the flip effect turns the card around and displays the content in an eye pleasing way.
 
 ![The Flip Card Feature](assets/images/flip_effect.png)
 - ### The End Screen
@@ -118,7 +118,7 @@
 
 ### Testing User Stories from User Experience (UX) Section
 -   #### First Time Visitor Goals
-    -  As a first time visitor I expect to find information about how the game is player.  
+    -  As a first time visitor I expect to find information about how the game is played.  
         -   When entering the game site, the rules of the game are shown immediately to the user.
     -  As a first time visitor I expect to be able to easily understand how to navigate the game. 
         -   Upon entering the game it is easily discoverable where to click in order to go to the next step.
@@ -130,7 +130,7 @@
     -  As a returning user I want to beat my previous time 
         -    The game incorporates a timer that shows the time it took to complete the game. This can provide for the user to set as a goal to beat the previous time.
     -  As a returning user I want to improve and find the game easier to play as you go along
-        -   After the first couple of tries in game, it gets easier and quicker to use the interface.
+        -   After the first couple of tries in the game, it gets easier and quicker as you get accustomed to the interface.
 
     
 
@@ -143,7 +143,7 @@
 
 
 ### Further Testing
--   The website has been thoroughly tested on various  browsers such as Internet Explorer, Google Chrome, Firefox, Safari and Microsoft Edge. 
+-   The website has been thoroughly tested on various browsers such as Internet Explorer, Google Chrome, Firefox, Safari and Microsoft Edge. 
 -   Adaptation to different devices to make sure it scales properly has been tested using the below tools:
     -   [Responsivetesttool](http://responsivetesttool.com/)
     -   [Google Devtools](https://developer.chrome.com/docs/devtools/open/)
@@ -153,9 +153,9 @@
 ### Known Bugs
 |Bug | Solution | Status |
 |----|:---------|:-------|
-| Responsiveness for mobile devices |  Debug with devtools and reduce the wrapper size and padding    | solved |
-| Card flip function did not turn back the cards| Debug the setTimout function    | solved |
-| If you click on the same card twice it counts as a match |  Debug the onclick attributes    | in progress |
+| Responsiveness for mobile devices |  Debug with devtools and reduce the wrapper size and padding  | solved |
+| Card flip function did not turn back the cards| Debug the setTimout function  | solved |
+| If you click on the same card twice it counts as a match |  Add a class attribute to the first card being clicked| to be solved |
 
 
 
@@ -199,7 +199,7 @@ For deployment of the project, I used GitHub Pages by following the below steps:
 - Inspiration on how to do the 3D flip effect came from the Youtube channel: [freeCodeCamp.org](https://www.youtube.com/watch?v=ZniVgo8U7ek). 
 
 ### Content
-- The icons on the memorycards comes from  [FontAwesome](https://fontawesome.com/). 
+- The icons on the memorycards comes from [FontAwesome](https://fontawesome.com/). 
 
 ### Acknowledgements
 I would like to thank: 
