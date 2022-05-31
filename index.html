@@ -31,7 +31,7 @@
 
             </div>
             <div>
-                <p><span>Enter your name:</span>
+                <p><span>Player Name:</span>
                     <p>
                         <input type="text" id="name">
             </div>
@@ -44,7 +44,8 @@
     <!-- the game screen shows when clicking the submit button - Start game! It is controlled by Javascript. -->
     <div id="game-screen" class="wrapper">
         <header>
-            <h1>Good Luck! <span id="clock"></span></h1>
+            <h1>Good Luck! <div id="timer">0</div>
+            </h1>
         </header>
         <section id="game-screen-info" class="screens">
             <div id="game" class="inside-screen">
@@ -55,10 +56,10 @@
     <!-- the finish wrapper is displayed after the game is completed by the user. It is controlled by Javascript. -->
     <div id="finish-screen" class="wrapper">
         <header>
-            <h1>YOU FINISHED!</h1>
+            <h1>GAME FINISHED!</h1>
         </header>
         <section id="finish-screen-info" class="screens">
-            <span>You finished in (time)!</span>
+            <span id="time"></span>
             <div id="highscore" class="inside-screen">
                 <div id="highscore-table">
                     <span>HIGHSCORE</span>

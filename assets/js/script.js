@@ -9,7 +9,7 @@ function showStartScreen() {
   startbutton.addEventListener('click', showGameScreen);
 }
 // collets the name from the player
-let username = document.getElementById('name').innerText;
+var username = document.getElementById('name').value;
 
 // switches to the game screen and runs the cardsContainer function
 function showGameScreen() {
@@ -18,8 +18,18 @@ function showGameScreen() {
     document.getElementById('start-screen').style.display = "none";
     document.getElementById('game-screen').style.display = "block";
   }, 400);
-  cardDeck();
 
+  cardDeck();
+  timer();
+
+}
+// timer function that runs the game clock
+var seconds = 0;
+
+function timer() {
+  setInterval(function clock() {
+    document.getElementById('timer').innerHTML = seconds++;
+  }, 1000);
 }
 
 // array that stores the memorycards, 8 pairs of two items of the same kind
@@ -135,9 +145,9 @@ function matchCards() {
 
 // shows the finish screen when all the cards have been matched
 function showFinishScreen() {
-
   document.getElementById('game-screen').style.display = "none";
   document.getElementById('finish-screen').style.display = "block";
+  document.getElementById('time').innerHTML = `Your time was:  ${seconds}s!`;
   let startbutton = document.getElementById('start-new-button');
   startbutton.addEventListener('click', restartGame);
   let quitbutton = document.getElementById('quit-button');
@@ -150,10 +160,10 @@ function showFinishScreen() {
 function restartGame() {
   document.getElementById('game-screen').style.display = "block";
   document.getElementById('finish-screen').style.display = "none";
-  let oldGameScreen = document.getElementById("game");
-  oldGameScreen.innerHTML = "";
+  document.getElementById("game").innerHTML = '';
   matchedCardsArray = [];
   cardDeck();
+  
 }
 // swithes to the start screen when user clicks on quit game in the finish screen
 // resets the game screen html and matchedCardArray
@@ -162,7 +172,7 @@ function restartStartScreen() {
   document.getElementById('finish-screen').style.display = "none";
   let startbutton = document.getElementById('start-button');
   startbutton.addEventListener('click', showGameScreen);
-  let oldGameScreen = document.getElementById("game");
-  oldGameScreen.innerHTML = "";
+  document.getElementById("game").innerHTML = '';
   matchedCardsArray = [];
+
 }
