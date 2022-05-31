@@ -207,7 +207,7 @@ button:active {
 }
 
 /* media queries */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
     .wrapper {
         width: 600px;
         height: 700px;

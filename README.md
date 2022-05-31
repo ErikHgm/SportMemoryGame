@@ -145,8 +145,9 @@
 ### Known Bugs
 |Bug | Solution | Status |
 |----|:---------|:-------|
-| If you click on the same card twice it counts as a match |  Debug the onclick attributes    | in progress |
 | Responsiveness for mobile devices |  Debug with devtools and reduce the wrapper size and padding    | solved |
+| Card flip function did not turn back the cards| Debug the setTimout function    | solved |
+| If you click on the same card twice it counts as a match |  Debug the onclick attributes    | in progress |
 
 
 

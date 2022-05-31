@@ -19,17 +19,19 @@ function showGameScreen() {
   }, 400);
 
   cardDeck();
+  seconds = 0;
   timer();
 
 }
+
 // timer function that runs the game clock
+const clock = setInterval(timer, 1000);
 var seconds = 0;
 
 function timer() {
-  setInterval(function clock() {
-    document.getElementById('timer').innerHTML = seconds++;
-  }, 1000);
+  document.getElementById("timer").innerHTML = seconds++;
 }
+
 // array that stores the memorycards, 8 pairs of two items of the same kind
 let cardArray = [
   'fa-solid fa-table-tennis-paddle-ball',
@@ -160,7 +162,9 @@ function restartGame() {
   document.getElementById('finish-screen').style.display = "none";
   document.getElementById("game").innerHTML = '';
   matchedCardsArray = [];
+  seconds = 0;
   cardDeck();
+  
 
 }
 // swithes to the start screen when user clicks on quit game in the finish screen
