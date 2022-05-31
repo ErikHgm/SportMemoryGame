@@ -67,9 +67,22 @@ h3 {
 
 }
 
-span {
+#highscore {
+    margin-top: 70px;
+}
+
+#highscore-table {
+    padding-top: 30px;
+}
+
+#time-heading {
     font-size: 1.3em;
     color: purple;
+    margin: 40px 0;
+}
+
+#time {
+    font-size: 2.5em;
 }
 
 #name {
