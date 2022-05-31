@@ -19,7 +19,7 @@ function showGameScreen() {
     document.getElementById('game-screen').style.display = "block";
   }, 400);
 
-  cardDeck();
+  cardDeck();  
   timer();
 
 }
@@ -31,7 +31,6 @@ function timer() {
     document.getElementById('timer').innerHTML = seconds++;
   }, 1000);
 }
-
 // array that stores the memorycards, 8 pairs of two items of the same kind
 let cardArray = [
   'fa-solid fa-table-tennis-paddle-ball',
@@ -132,7 +131,7 @@ function matchCards() {
   }
 
   // if the matchedCardArray has 16 items, all cards have been matched and the game is finished
-  if (matchedCardsArray.length === 16) {
+  if (matchedCardsArray.length === 2) {
     setTimeout(() => {
       showFinishScreen();
     }, 1700);
@@ -147,7 +146,7 @@ function matchCards() {
 function showFinishScreen() {
   document.getElementById('game-screen').style.display = "none";
   document.getElementById('finish-screen').style.display = "block";
-  document.getElementById('time').innerHTML = `Your time was:  ${seconds}s!`;
+  document.getElementById('time').innerHTML = `${seconds}s!`;
   let startbutton = document.getElementById('start-new-button');
   startbutton.addEventListener('click', restartGame);
   let quitbutton = document.getElementById('quit-button');
@@ -163,7 +162,7 @@ function restartGame() {
   document.getElementById("game").innerHTML = '';
   matchedCardsArray = [];
   cardDeck();
-  
+
 }
 // swithes to the start screen when user clicks on quit game in the finish screen
 // resets the game screen html and matchedCardArray
